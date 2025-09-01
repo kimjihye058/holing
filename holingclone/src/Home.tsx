@@ -44,15 +44,12 @@ const WrapperContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  width: 100%;
-    max-width: 1280px;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    min-height: 80px;
-    padding: 0px 40px;
+  max-width: 1280px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  padding: 0px 40px;
 `;
 
 const NavInner = styled.div`
@@ -68,8 +65,9 @@ const Main = styled.div`
   background: #C6EBFF url(/assets/images/bg.png) no-repeat center top;
   background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  position: relative; // 추가
 `;
 
 const First = styled.div`
@@ -78,11 +76,13 @@ const First = styled.div`
   gap: 170px;
   align-items: center;
   justify-content: center;
-  width: 1920px;
-  height: 880px;
-  max-width: 100vw;
-  margin: 0 auto;
+  width: 100%;
+  padding: calc(-415px + 50vh) 0px;
   position: relative;
+  background-image: url(/assets/images/root/main/bg.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
 `;
 
 const Title = styled.span`
@@ -179,8 +179,27 @@ const CloudTextWrapper = styled.div`
   }
 `;
 
-function Home () {
+const Banner = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(90deg, rgb(65, 129, 248) 50%, rgb(34, 201, 247) 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+`;
 
+const BannerImgBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`;
+
+function Home () {
     return (
         <div>
             <Nav>
@@ -203,7 +222,7 @@ function Home () {
                         <TryButton href="">무료체험 시작하기</TryButton>
                     </FirstLeft>
                     <div>
-                        <img src="/assets/images/scroll.svg" />
+                        <img src="/assets/images/scroll.svg" alt="" />
                         <CloudTextWrapper>
                             <img src="/assets/images/tablet.svg" alt="" />
                             <span style={{ fontSize: 16 }}>
@@ -211,12 +230,18 @@ function Home () {
                                 다운로드 및 이용 가능
                             </span>
                         </CloudTextWrapper>
-                    
                     </div>
                 </First>
+                <Banner>
+                  <BannerImgBox>
+                    <img src="/assets/images/banner_invite.png" alt="" />
+                  </BannerImgBox>
+                  <BannerImgBox>
+                    <img src="/assets/images/banner_brand.png" alt="" />
+                  </BannerImgBox>
+                </Banner>
             </Main>
         </div>
     )
-
 }
 export default Home
