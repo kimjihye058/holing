@@ -1,14 +1,29 @@
 @font-face {
-  font-family: JalnaGothic;
-  src: url('/assets/fonts/JalnanGothic.otf');
+  font-family: SUIT-ExtraBold;
+  src: url('/assets/fonts/SUIT-ExtraBold.woff2');
 }
 
 @font-face {
-  font-family: SUIT;
-  src: url('/assets/fonts/SUIT-Heavy.woff2');
+  font-family: SUIT-Regular;
+  src: url('/assets/fonts/SUIT-Regular.woff2');
+}
+
+@font-face {
+  font-family: SUIT-SemiBold;
+  src: url('/assets/fonts/SUIT-SemiBold.woff2');
 }
 
 @font-face {
   font-family: Maplestory;
-  src: url('/assets/fonts/Maplestory-Bold.otf');
+  src: url('/assets/fonts/MaplestoryOTFLight.woff');
+}
+
+@font-face {
+  font-family: Pretendard-Bold;
+  src: url('/assets/fonts/Pretendard-Bold.woff');
+}
+
+@font-face {
+  font-family: Pretendard-SemiBold;
+  src: url('/assets/fonts/Pretendard-SemiBold.woff');
 }
