@@ -4,6 +4,7 @@ const Nav = styled.nav`
   display: flex;
   background: white;
   width: 100%;
+  height: 80px;
   border-bottom: 1px solid rgb(230, 231, 234);
   align-items: center;
   justify-content: center;
@@ -73,29 +74,31 @@ const ButtonDiv = styled.div`
 `;
 
 const Main = styled.div`
-  margin-top: 88px;
-  min-height: 100vh;
-  width: 100vw;
-  background: #C6EBFF url(/assets/images/bg.png) no-repeat center top;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+    margin-top: 80px;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
 `;
 
 const First = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 170px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-  background-image: url(/assets/images/root/main/bg.png);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 170px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background: url(/assets/images/bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto;
+    padding-top: calc(-415px + 50vh);
+    padding-right: 0px;
+    padding-bottom: calc(-415px + 50vh);
+    padding-left: 0px;
 `;
 
 const Title = styled.span`
@@ -154,6 +157,13 @@ const FirstLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+`;
+
+const FirstRight = styled.div`
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
 `;
 
 const GreenSpan = styled.span`
@@ -239,7 +249,7 @@ function Home () {
                         <Desc>동영상 강의, 문제풀이, 오답학습까지<br/> 혼자서도 알차고 탄탄하게 공부해요</Desc>
                         <TryButton href="">무료체험 시작하기</TryButton>
                     </FirstLeft>
-                    <div>
+                    <FirstRight>
                         <img src="/assets/images/scroll.svg" alt="" />
                         <CloudTextWrapper>
                             <img src="/assets/images/tablet.svg" alt="" />
@@ -248,7 +258,7 @@ function Home () {
                                 다운로드 및 이용 가능
                             </span>
                         </CloudTextWrapper>
-                    </div>
+                    </FirstRight>
                 </First>
                 <Banner>
                   <BannerImgBox>
