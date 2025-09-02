@@ -44,18 +44,24 @@ const WrapperContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 80px;
   padding: 0px 40px;
 `;
 
-const NavInner = styled.div`
+const LogoDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+`;
+
+const ButtonDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    -webkit-box-align: center;
+    align-items: center;
 `;
 
 const Main = styled.div`
@@ -67,7 +73,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; // 추가
+  position: relative;
 `;
 
 const First = styled.div`
@@ -77,7 +83,6 @@ const First = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: calc(-415px + 50vh) 0px;
   position: relative;
   background-image: url(/assets/images/root/main/bg.png);
   background-repeat: no-repeat;
@@ -154,11 +159,9 @@ const CloudTextWrapper = styled.div`
   align-items: center;      
   justify-content: center; 
   text-align: center;
-  margin-top: 16px;
   color: #000;
   min-width: 260px;
   min-height: 80px;
-  gap: 10px;                   
 
   &::before {
     content: "";
@@ -193,10 +196,9 @@ const Banner = styled.div`
 `;
 
 const BannerImgBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    height: 120px;
 `;
 
 function Home () {
@@ -204,13 +206,15 @@ function Home () {
         <div>
             <Nav>
                 <WrapperContainer>
-                    <NavInner>
+                    <LogoDiv>
                         <a>
                             <ImgLogo src="/assets/images/favicon.svg" alt='logo' />
                         </a>
-                        <ADownload>앱 다운로드</ADownload>
-                        <ALogin>로그인</ALogin>
-                    </NavInner>
+                    </LogoDiv>
+                    <ButtonDiv>
+                            <ADownload>앱 다운로드</ADownload>
+                            <ALogin>로그인</ALogin>
+                    </ButtonDiv>
                 </WrapperContainer>
             </Nav>
             <Main>
