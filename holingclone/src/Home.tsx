@@ -222,16 +222,17 @@ const Banner = styled.div`
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;  
+
+
+  width: 100%;
+  background-image: linear-gradient(90deg, rgb(65, 129, 248) 50%, rgb(34, 201, 247) 50%);
+
 `;
 
 const BannerImgBox = styled.div`
   cursor: pointer;
   z-index: 2;
-  width: 100%;
-  background-image: linear-gradient(90deg, rgb(65, 129, 248) 50%, rgb(34, 201, 247) 50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 120px;
 
   img {
     margin: 0 auto;
