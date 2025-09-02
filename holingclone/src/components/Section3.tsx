@@ -227,7 +227,8 @@ export const Steps = styled.div`
   flex-direction: column;
   gap: 60px;
   width: 100%;
-  padding: 0px 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   max-width: 1280px;
 `;
 
