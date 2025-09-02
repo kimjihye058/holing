@@ -12,6 +12,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0 !important;
+
+  --gray_200: #f6f7f9;
+  --gray_300: #e6e7ea;
+  --gray_400: #d9dde0;
+  --gray_500: #bfc5cb;
+  --gray_600: #98a1a6;
+  --gray_700: #757e85;
+  --gray_850: #4a4e53;
+  --gray_900: #121619;
+  --point_01: #00ab15;
+  --error-txt: #f65c51;
+  --point_txt: #3679fa;
+  --point_light: #eaf7e9;
+  --border-promotion: #ff8700;
+  --use-ticket: #00ab15;
+  --promotion-1: #3679fa;
+  --promotion-3: #ff9d2f;
+  --promotion-6: #ff8700;
+  --promotion-12: #ff5500;
 }
 
 a {
@@ -57,7 +76,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #000000;
     background-color: #ffffff;
   }
   a:hover {
