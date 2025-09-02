@@ -97,7 +97,7 @@ const First = styled.div`
     background-size: auto;
     padding-top: calc(-415px + 50vh);
     padding-right: 0px;
-    padding-bottom: calc(-415px + 50vh);
+    padding-bottom: calc(-415px + 52vh);
     padding-left: 0px;
 `;
 
@@ -208,22 +208,29 @@ const CloudTextWrapper = styled.div`
 `;
 
 const Banner = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;  
+`;
+
+const BannerImgBox = styled.div`
+  cursor: pointer;
+  z-index: 2;
   width: 100%;
-  height: 120px;
   background-image: linear-gradient(90deg, rgb(65, 129, 248) 50%, rgb(34, 201, 247) 50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-`;
 
-const BannerImgBox = styled.div`
-    cursor: pointer;
-    z-index: 2;
+  img {
+    margin: 0 auto;
+    display: block;
     height: 120px;
+    width: auto;
+  }
 `;
 
 function Home () {
