@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Nav = styled.nav`
   display: flex;
@@ -21,26 +21,26 @@ const ImgLogo = styled.img`
 `;
 
 const ADownload = styled.a`
-    display: flex;
-    height: 30px;
-    padding: 8px 30px 0px;
-    box-pack: center;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 20px;
-    background: rgb(0, 171, 21);
-    box-shadow: rgba(0, 0, 0, 0.12) 0px -5px 0px 0px inset;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: SUIT;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.2s ease-in-out;
+  display: flex;
+  height: 30px;
+  padding: 8px 30px 0px;
+  box-pack: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: rgb(0, 171, 21);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px -5px 0px 0px inset;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: SUIT;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease-in-out;
 `;
 
 const ALogin = styled.a`
@@ -68,39 +68,39 @@ const LogoDiv = styled.div`
 `;
 
 const ButtonDiv = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    box-align: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  box-align: center;
+  align-items: center;
 `;
 
 const Main = styled.div`
-    margin-top: 80px;
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    box-align: center;
-    align-items: center;
+  margin-top: 80px;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  box-align: center;
+  align-items: center;
 `;
 
 const First = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 170px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    background: url(/assets/images/bg.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: auto;
-    padding-top: calc(-415px + 50vh);
-    padding-right: 0px;
-    padding-bottom: calc(-415px + 52vh);
-    padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  background: url(/assets/images/bg.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+  padding-top: calc(-415px + 50vh);
+  padding-right: 0px;
+  padding-bottom: calc(-415px + 52vh);
+  padding-left: 0px;
 `;
 
 const Title = styled.span`
@@ -131,7 +131,7 @@ const Brand = styled.span`
 const Desc = styled.span`
   font-size: 24px;
   font-family: SUIT;
-  color: #757E85;
+  color: #757e85;
   display: block;
   margin-top: 28px;
   @media (max-width: 768px) {
@@ -140,26 +140,26 @@ const Desc = styled.span`
 `;
 
 const TryButton = styled.a`
-    display: flex;
-    width: 200px;
-    height: 50px;
-    flex-direction: column;
-    box-align: center;
-    align-items: center;
-    border-radius: 44px;
-    background: var(--p_green_500_btON, #00AB15);
-    box-shadow: rgba(0, 0, 0, 0.12) 0px -12px 0px 0px inset;
-    cursor: pointer;
-    user-select: none;
-    color: #fff;
-    padding: 18px 48px;
-    font-family: Maplestory;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.52px;
-    margin: 80px 0px 0px;
+  display: flex;
+  width: 200px;
+  height: 50px;
+  flex-direction: column;
+  box-align: center;
+  align-items: center;
+  border-radius: 44px;
+  background: var(--p_green_500_btON, #00ab15);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px -12px 0px 0px inset;
+  cursor: pointer;
+  user-select: none;
+  color: #fff;
+  padding: 18px 48px;
+  font-family: Maplestory;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.52px;
+  margin: 80px 0px 0px;
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -175,23 +175,23 @@ const FirstLeft = styled.div`
 `;
 
 const FirstRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    box-align: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-align: center;
+  align-items: center;
 `;
 
 const GreenSpan = styled.span`
-  color: #00AB15;
+  color: #00ab15;
   font-weight: 700;
   font-family: Maplestory;
 `;
 
 const CloudTextWrapper = styled.div`
   position: relative;
-  display: flex;             
-  align-items: center;      
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #000;
   min-width: 260px;
@@ -204,7 +204,7 @@ const CloudTextWrapper = styled.div`
     top: 50%;
     width: 436px;
     height: 114px;
-    background: url('/assets/images/cloud.svg') no-repeat center/contain;
+    background: url("/assets/images/cloud.svg") no-repeat center/contain;
     transform: translate(-50%, -50%);
     z-index: 0;
     pointer-events: none;
@@ -222,9 +222,13 @@ const Banner = styled.div`
   box-align: center;
   align-items: center;
   box-pack: center;
-  justify-content: center;  
+  justify-content: center;
   width: 100%;
-  background-image: linear-gradient(90deg, rgb(65, 129, 248) 50%, rgb(34, 201, 247) 50%);
+  background-image: linear-gradient(
+    90deg,
+    rgb(65, 129, 248) 50%,
+    rgb(34, 201, 247) 50%
+  );
 `;
 
 const BannerImgBox = styled.div`
@@ -249,7 +253,10 @@ const Second = styled.div`
   z-index: 0;
   width: 100%;
   position: relative;
-  background: linear-gradient(rgb(255, 255, 255) 22.41%, rgb(209, 242, 254) 100%);
+  background: linear-gradient(
+    rgb(255, 255, 255) 22.41%,
+    rgb(209, 242, 254) 100%
+  );
   padding: 120px 0px;
 `;
 
@@ -274,15 +281,15 @@ const Spans1 = styled.span`
 `;
 
 const Spans2 = styled.span`
-  font-size: 48px; 
+  font-size: 48px;
   font-family: Maplestory;
-  color:#121619;
+  color: #121619;
 `;
 
 const Spans2_1 = styled.span`
   font-size: 48px;
   font-family: Maplestory;
-  color:#00ab15;
+  color: #00ab15;
 `;
 
 const VideoDiv = styled.div`
@@ -311,17 +318,15 @@ const VideoBottomDiv = styled.div`
   position: absolute;
   z-index: -1;
   width: 105%;
-	height: 52px;
-	left: 50%;
-	transform: translateX(-50%);
-	border-radius: 32px;
-	background: rgb(183, 233, 239);
+  height: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 32px;
+  background: rgb(183, 233, 239);
   bottom: -8px;
 `;
 
-
-function Home () {
-
+function Home() {
   const videos = [
     "/assets/images/video_01.mp4",
     "/assets/images/video_02.mp4",
@@ -338,83 +343,86 @@ function Home () {
     }
   };
 
-    return (
-        <div>
-            <Nav>
-                <WrapperContainer>
-                    <LogoDiv>
-                        <a>
-                            <ImgLogo src="/assets/images/favicon.svg" alt='logo' />
-                        </a>
-                    </LogoDiv>
-                    <ButtonDiv>
-                            <ADownload
-                                href='https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698'
-                                target='_blank'
-                                rel='noreferrer'
-                            >   
-                                앱 다운로드
-                            </ADownload>
-                            <ALogin>로그인</ALogin>
-                    </ButtonDiv>
-                </WrapperContainer>
-            </Nav>
-            <Main>
-                <First>
-                    <FirstLeft>
-                        <Title>스스로 학습하는 수학 공부 앱</Title>
-                        <Brand>홀링</Brand>
-                        <Desc>동영상 강의, 문제풀이, 오답학습까지<br/> 혼자서도 알차고 탄탄하게 공부해요</Desc>
-                        <TryButton href="">무료체험 시작하기</TryButton>
-                    </FirstLeft>
-                    <FirstRight>
-                        <img src="/assets/images/scroll.svg" alt="" />
-                        <CloudTextWrapper>
-                            <img src="/assets/images/tablet.svg" alt="" />
-                            <span style={{ fontSize: 16, fontFamily: 'Maplestory'}}>
-                                홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan>에서 <br />
-                                다운로드 및 이용 가능
-                            </span>
-                        </CloudTextWrapper>
-                    </FirstRight>
-                </First>
-                <Banner>
-                  <BannerImgBox>
-                    <img src="/assets/images/banner_invite.png" alt="" />
-                  </BannerImgBox>
-                  <BannerImgBox>
-                    <img src="/assets/images/banner_brand.png" alt="" />
-                  </BannerImgBox>
-                </Banner>
-                <Second>
-                  <SpansDiv>
-                    <Spans1>초등부터 중·고등까지</Spans1>
-                    <Spans2>
-                      <Spans2_1>하루 30분</Spans2_1>
-                      이면 한 학기 수학을 완성할 수 있어요
-                    </Spans2>
-                  </SpansDiv>
-                  <VideoDiv>
-                    <VideoPlayDiv>
-                      <video
-                        key={currentVideo}
-                        src={videos[currentVideo]}
-                        autoPlay
-                        muted
-                        playsInline
-                        onEnded={handleVideoEnd}
-                        style={{
-                          width: "100%",
-                          display: "block",
-                          border: "1px solid rgb(191, 197, 203)",
-                        }}
-                      />
-                      <VideoBottomDiv></VideoBottomDiv>
-                    </VideoPlayDiv>
-                  </VideoDiv>
-                </Second>
-            </Main>
-        </div>
-    )
+  return (
+    <div>
+      <Nav>
+        <WrapperContainer>
+          <LogoDiv>
+            <a>
+              <ImgLogo src="/assets/images/favicon.svg" alt="logo" />
+            </a>
+          </LogoDiv>
+          <ButtonDiv>
+            <ADownload
+              href="https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698"
+              target="_blank"
+              rel="noreferrer"
+            >
+              앱 다운로드
+            </ADownload>
+            <ALogin>로그인</ALogin>
+          </ButtonDiv>
+        </WrapperContainer>
+      </Nav>
+      <Main>
+        <First>
+          <FirstLeft>
+            <Title>스스로 학습하는 수학 공부 앱</Title>
+            <Brand>홀링</Brand>
+            <Desc>
+              동영상 강의, 문제풀이, 오답학습까지
+              <br /> 혼자서도 알차고 탄탄하게 공부해요
+            </Desc>
+            <TryButton href="">무료체험 시작하기</TryButton>
+          </FirstLeft>
+          <FirstRight>
+            <img src="/assets/images/scroll.svg" alt="" />
+            <CloudTextWrapper>
+              <img src="/assets/images/tablet.svg" alt="" />
+              <span style={{ fontSize: 16, fontFamily: "Maplestory" }}>
+                홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan>에서 <br />
+                다운로드 및 이용 가능
+              </span>
+            </CloudTextWrapper>
+          </FirstRight>
+        </First>
+        <Banner>
+          <BannerImgBox>
+            <img src="/assets/images/banner_invite.png" alt="" />
+          </BannerImgBox>
+          <BannerImgBox>
+            <img src="/assets/images/banner_brand.png" alt="" />
+          </BannerImgBox>
+        </Banner>
+        <Second>
+          <SpansDiv>
+            <Spans1>초등부터 중·고등까지</Spans1>
+            <Spans2>
+              <Spans2_1>하루 30분</Spans2_1>
+              이면 한 학기 수학을 완성할 수 있어요
+            </Spans2>
+          </SpansDiv>
+          <VideoDiv>
+            <VideoPlayDiv>
+              <video
+                key={currentVideo}
+                src={videos[currentVideo]}
+                autoPlay
+                muted
+                playsInline
+                onEnded={handleVideoEnd}
+                style={{
+                  width: "100%",
+                  display: "block",
+                  border: "1px solid rgb(191, 197, 203)",
+                }}
+              />
+              <VideoBottomDiv></VideoBottomDiv>
+            </VideoPlayDiv>
+          </VideoDiv>
+        </Second>
+      </Main>
+    </div>
+  );
 }
-export default Home
+export default Home;
