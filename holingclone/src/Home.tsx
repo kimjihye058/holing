@@ -105,7 +105,6 @@ const Title = styled.span`
   font-size: 30px;
   font-weight: 400;
   display: block;
-  margin-bottom: 12px;
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -116,7 +115,6 @@ const Brand = styled.span`
   font-size: 90px;
   font-weight: 700;
   display: block;
-  margin-bottom: 16px;
 
   @media (max-width: 768px) {
     font-size: 32px;
@@ -127,24 +125,33 @@ const Desc = styled.span`
   font-size:24px;
   color: #757E85;
   display: block;
-  margin-bottom: 32px;
-
+  margin-top: 28px;
   @media (max-width: 768px) {
     font-size: 14px;
   }
 `;
 
 const TryButton = styled.a`
-  display: inline-block;
-  background: #00AB15;
-  color: #fff;
-  border-radius: 40px;
-  padding: 18px 48px;
-  font-size: 22px;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 44px;
+    background: var(--p_green_500_btON, #00AB15);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px -12px 0px 0px inset;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    padding: 18px 48px;
+
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.52px;
+    margin: 80px 0px 0px;
 
   @media (max-width: 768px) {
     font-size: 16px;
