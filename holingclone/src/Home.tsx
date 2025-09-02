@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -293,7 +294,50 @@ const VideoDiv = styled.div`
   width: 785px;
 `;
 
+const VideoPlayDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10.5px;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 35px;
+  border: 2px solid rgb(191, 197, 203);
+  background: rgb(255, 255, 255);
+  padding: 25px 33px;
+`;
+
+const VideoBottomDiv = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 105%;
+	height: 52px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 32px;
+	background: rgb(183, 233, 239);
+  bottom: -8px;
+`;
+
+
 function Home () {
+
+  const videos = [
+    "/assets/images/video_01.mp4",
+    "/assets/images/video_02.mp4",
+    "/assets/images/video_03.mp4",
+  ];
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleVideoEnd = () => {
+    if (currentVideo < videos.length - 1) {
+      setCurrentVideo(currentVideo + 1);
+    } else {
+      setCurrentVideo(0);
+    }
+  };
+
     return (
         <div>
             <Nav>
@@ -351,9 +395,22 @@ function Home () {
                     </Spans2>
                   </SpansDiv>
                   <VideoDiv>
-                    <div>
-
-                    </div>
+                    <VideoPlayDiv>
+                      <video
+                        key={currentVideo}
+                        src={videos[currentVideo]}
+                        autoPlay
+                        muted
+                        playsInline
+                        onEnded={handleVideoEnd}
+                        style={{
+                          width: "100%",
+                          display: "block",
+                          border: "1px solid rgb(191, 197, 203)",
+                        }}
+                      />
+                      <VideoBottomDiv></VideoBottomDiv>
+                    </VideoPlayDiv>
                   </VideoDiv>
                 </Second>
             </Main>
