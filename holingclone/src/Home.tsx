@@ -46,6 +46,7 @@ const ALogin = styled.a`
   color: #000000;
   border: none;
   font-size: 16px;
+  font-family: Maplestory;
 `;
 
 const WrapperContainer = styled.div`
@@ -102,8 +103,10 @@ const First = styled.div`
 `;
 
 const Title = styled.span`
+  color: #000;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 700;
+  font-family: SUIT;
   display: block;
 
   @media (max-width: 768px) {
@@ -112,8 +115,11 @@ const Title = styled.span`
 `;
 
 const Brand = styled.span`
+  color: #000;
   font-size: 90px;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: Maplestory;
+
   display: block;
 
   @media (max-width: 768px) {
@@ -122,7 +128,8 @@ const Brand = styled.span`
 `;
 
 const Desc = styled.span`
-  font-size:24px;
+  font-size: 24px;
+  font-family: SUIT;
   color: #757E85;
   display: block;
   margin-top: 28px;
@@ -145,7 +152,7 @@ const TryButton = styled.a`
     user-select: none;
     color: #fff;
     padding: 18px 48px;
-
+    font-family: Maplestory;
     font-size: 26px;
     font-style: normal;
     font-weight: 400;
@@ -176,6 +183,7 @@ const FirstRight = styled.div`
 const GreenSpan = styled.span`
   color: #00AB15;
   font-weight: 700;
+  font-family: Maplestory;
 `;
 
 const CloudTextWrapper = styled.div`
@@ -233,6 +241,60 @@ const BannerImgBox = styled.div`
   }
 `;
 
+const Second = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  -webkit-box-align: center;
+  align-items: center;
+  z-index: 0;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(rgb(255, 255, 255) 22.41%, rgb(209, 242, 254) 100%);
+  padding: 120px 0px;
+`;
+
+const SpansDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  -webkit-box-align: center;
+  align-items: center;
+`;
+
+const Spans1 = styled.span`
+  font-family: SUIT;
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  width: unset;
+  white-space: break-spaces;
+  line-height: 1.5;
+  -webkit-text-stroke: 0.2px black;
+`;
+
+const Spans2 = styled.span`
+  font-size: 48px; 
+  font-family: Maplestory;
+  color:#121619;
+`;
+
+const Spans2_1 = styled.span`
+  font-size: 48px;
+  font-family: Maplestory;
+  color:#00ab15;
+`;
+
+const VideoDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 785px;
+`;
+
 function Home () {
     return (
         <div>
@@ -267,7 +329,7 @@ function Home () {
                         <img src="/assets/images/scroll.svg" alt="" />
                         <CloudTextWrapper>
                             <img src="/assets/images/tablet.svg" alt="" />
-                            <span style={{ fontSize: 16 }}>
+                            <span style={{ fontSize: 16, fontFamily: 'Maplestory'}}>
                                 홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan>에서 <br />
                                 다운로드 및 이용 가능
                             </span>
@@ -282,6 +344,20 @@ function Home () {
                     <img src="/assets/images/banner_brand.png" alt="" />
                   </BannerImgBox>
                 </Banner>
+                <Second>
+                  <SpansDiv>
+                    <Spans1>초등부터 중·고등까지</Spans1>
+                    <Spans2>
+                      <Spans2_1>하루 30분</Spans2_1>
+                      이면 한 학기 수학을 완성할 수 있어요
+                    </Spans2>
+                  </SpansDiv>
+                  <VideoDiv>
+                    <div>
+
+                    </div>
+                  </VideoDiv>
+                </Second>
             </Main>
         </div>
     )
