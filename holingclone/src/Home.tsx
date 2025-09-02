@@ -19,18 +19,26 @@ const ImgLogo = styled.img`
 `;
 
 const ADownload = styled.a`
-  display: flex;
-  height: 40px;
-  padding: 13px 30px 0px;
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: 40px;
-  background: #00AB15;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+    display: flex;
+    height: 30px;
+    padding: 8px 30px 0px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: rgb(0, 171, 21);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px -5px 0px 0px inset;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: SUIT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease-in-out;
 `;
 
 const ALogin = styled.a`
@@ -213,10 +221,12 @@ function Home () {
                     </LogoDiv>
                     <ButtonDiv>
                             <ADownload
-                            href='https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698'
-                            target='_blank'
-                            rel='noreferrer'
-                            >앱 다운로드</ADownload>
+                                href='https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698'
+                                target='_blank'
+                                rel='noreferrer'
+                            >   
+                                앱 다운로드
+                            </ADownload>
                             <ALogin>로그인</ALogin>
                     </ButtonDiv>
                 </WrapperContainer>
