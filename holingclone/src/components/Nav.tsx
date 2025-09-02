@@ -57,7 +57,7 @@ export const ADownload = styled.a`
   box-shadow: rgba(0, 0, 0, 0.12) 0px -5px 0px 0px inset;
   color: rgb(255, 255, 255);
   text-align: center;
-  font-family: SUIT;
+  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -71,7 +71,7 @@ export const ALogin = styled.a`
   color: #000000;
   border: none;
   font-size: 16px;
-  font-family: Maplestory;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
 `;
 
 export const WrapperContainer = styled.div`

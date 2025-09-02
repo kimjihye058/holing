@@ -76,7 +76,7 @@ const SpansDiv = styled.div`
 `;
 
 const Spans1 = styled.span`
-  font-family: SUIT;
+  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 30px;
   font-weight: 500;
   color: #000;
@@ -88,13 +88,13 @@ const Spans1 = styled.span`
 
 const Spans2 = styled.span`
   font-size: 48px;
-  font-family: Maplestory;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: #121619;
 `;
 
 const Spans2_1 = styled.span`
   font-size: 48px;
-  font-family: Maplestory;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: #00ab15;
 `;
 

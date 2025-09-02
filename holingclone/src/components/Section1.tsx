@@ -49,7 +49,7 @@ export const Title = styled.span`
   color: #000;
   font-size: 30px;
   font-weight: 700;
-  font-family: SUIT;
+  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: block;
 
   @media (max-width: 768px) {
@@ -61,7 +61,7 @@ export const Brand = styled.span`
   color: #000;
   font-size: 90px;
   font-weight: 400;
-  font-family: Maplestory;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: block;
   @media (max-width: 768px) {
     font-size: 32px;
@@ -70,7 +70,7 @@ export const Brand = styled.span`
 
 export const Desc = styled.span`
   font-size: 24px;
-  font-family: SUIT;
+  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: #757e85;
   display: block;
   margin-top: 28px;
@@ -93,7 +93,7 @@ export const TryButton = styled.a`
   user-select: none;
   color: #fff;
   padding: 18px 48px;
-  font-family: Maplestory;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
@@ -123,7 +123,7 @@ export const FirstRight = styled.div`
 export const GreenSpan = styled.span`
   color: #00ab15;
   font-weight: 700;
-  font-family: Maplestory;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
 `;
 
 export const CloudTextWrapper = styled.div`
