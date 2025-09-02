@@ -24,7 +24,7 @@ const ADownload = styled.a`
     display: flex;
     height: 30px;
     padding: 8px 30px 0px;
-    -webkit-box-pack: center;
+    box-pack: center;
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
@@ -71,7 +71,7 @@ const ButtonDiv = styled.div`
     display: flex;
     flex-direction: row;
     gap: 30px;
-    -webkit-box-align: center;
+    box-align: center;
     align-items: center;
 `;
 
@@ -81,7 +81,7 @@ const Main = styled.div`
     width: 100vw;
     display: flex;
     flex-direction: column;
-    -webkit-box-align: center;
+    box-align: center;
     align-items: center;
 `;
 
@@ -144,7 +144,7 @@ const TryButton = styled.a`
     width: 200px;
     height: 50px;
     flex-direction: column;
-    -webkit-box-align: center;
+    box-align: center;
     align-items: center;
     border-radius: 44px;
     background: var(--p_green_500_btON, #00AB15);
@@ -177,7 +177,7 @@ const FirstLeft = styled.div`
 const FirstRight = styled.div`
     display: flex;
     flex-direction: column;
-    -webkit-box-align: center;
+    box-align: center;
     align-items: center;
 `;
 
@@ -219,9 +219,9 @@ const CloudTextWrapper = styled.div`
 const Banner = styled.div`
   display: flex;
   flex-direction: row;
-  -webkit-box-align: center;
+  box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
+  box-pack: center;
   justify-content: center;  
   width: 100%;
   background-image: linear-gradient(90deg, rgb(65, 129, 248) 50%, rgb(34, 201, 247) 50%);
@@ -244,7 +244,7 @@ const Second = styled.div`
   display: flex;
   flex-direction: column;
   gap: 80px;
-  -webkit-box-align: center;
+  box-align: center;
   align-items: center;
   z-index: 0;
   width: 100%;
@@ -257,7 +257,7 @@ const SpansDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  -webkit-box-align: center;
+  box-align: center;
   align-items: center;
 `;
 
@@ -270,7 +270,7 @@ const Spans1 = styled.span`
   width: unset;
   white-space: break-spaces;
   line-height: 1.5;
-  -webkit-text-stroke: 0.2px black;
+  text-stroke: 0.2px black;
 `;
 
 const Spans2 = styled.span`
@@ -289,7 +289,7 @@ const VideoDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 54px;
-  -webkit-box-align: center;
+  box-align: center;
   align-items: center;
   width: 785px;
 `;
@@ -298,7 +298,7 @@ const VideoPlayDiv = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10.5px;
-  -webkit-box-align: center;
+  box-align: center;
   align-items: center;
   position: relative;
   border-radius: 35px;
