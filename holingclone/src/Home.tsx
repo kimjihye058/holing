@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Section1 from "./components/Section1";
 import Banner1 from "./components/Banner1";
 import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Section1 />
         <Banner1 />
         <Section2 />
+        <Section3 />
       </Main>
     </>
   );
