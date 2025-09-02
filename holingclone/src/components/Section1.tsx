@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+function Section1() {
+  return (
+    <First>
+      <FirstLeft>
+        <Title>스스로 학습하는 수학 공부 앱</Title>
+        <Brand>홀링</Brand>
+        <Desc>
+          동영상 강의, 문제풀이, 오답학습까지
+          <br /> 혼자서도 알차고 탄탄하게 공부해요
+        </Desc>
+        <TryButton href="">무료체험 시작하기</TryButton>
+      </FirstLeft>
+      <FirstRight>
+        <img src="/assets/images/scroll.svg" alt="" />
+        <CloudTextWrapper>
+          <img src="/assets/images/tablet.svg" alt="" />
+          <span style={{ fontSize: 16, fontFamily: "Maplestory" }}>
+            홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan>에서 <br />
+            다운로드 및 이용 가능
+          </span>
+        </CloudTextWrapper>
+      </FirstRight>
+    </First>
+  );
+}
+export default Section1;
+
 export const First = styled.div`
   display: flex;
   flex-direction: row;
@@ -35,9 +62,7 @@ export const Brand = styled.span`
   font-size: 90px;
   font-weight: 400;
   font-family: Maplestory;
-
   display: block;
-
   @media (max-width: 768px) {
     font-size: 32px;
   }
@@ -75,7 +100,6 @@ export const TryButton = styled.a`
   line-height: normal;
   letter-spacing: 0.52px;
   margin: 80px 0px 0px;
-
   @media (max-width: 768px) {
     font-size: 16px;
     padding: 14px 28px;
@@ -130,32 +154,3 @@ export const CloudTextWrapper = styled.div`
     z-index: 1;
   }
 `;
-
-
-
-function Section1() {
-    return (
-        <First>
-          <FirstLeft>
-            <Title>스스로 학습하는 수학 공부 앱</Title>
-            <Brand>홀링</Brand>
-            <Desc>
-              동영상 강의, 문제풀이, 오답학습까지
-              <br /> 혼자서도 알차고 탄탄하게 공부해요
-            </Desc>
-            <TryButton href="">무료체험 시작하기</TryButton>
-          </FirstLeft>
-          <FirstRight>
-            <img src="/assets/images/scroll.svg" alt="" />
-            <CloudTextWrapper>
-              <img src="/assets/images/tablet.svg" alt="" />
-              <span style={{ fontSize: 16, fontFamily: "Maplestory" }}>
-                홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan>에서 <br />
-                다운로드 및 이용 가능
-              </span>
-            </CloudTextWrapper>
-          </FirstRight>
-        </First>
-    )
-}
-export default Section1;

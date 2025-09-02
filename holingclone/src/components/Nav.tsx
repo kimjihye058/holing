@@ -1,5 +1,29 @@
-
 import styled from "styled-components";
+
+function Nav() {
+  return (
+    <NavDiv>
+      <WrapperContainer>
+        <LogoDiv>
+          <a>
+            <ImgLogo src="/assets/images/favicon.svg" alt="logo" />
+          </a>
+        </LogoDiv>
+        <ButtonDiv>
+          <ADownload
+            href="https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698"
+            target="_blank"
+            rel="noreferrer"
+          >
+            앱 다운로드
+          </ADownload>
+          <ALogin>로그인</ALogin>
+        </ButtonDiv>
+      </WrapperContainer>
+    </NavDiv>
+  );
+}
+export default Nav;
 
 export const NavDiv = styled.nav`
   display: flex;
@@ -74,28 +98,3 @@ export const ButtonDiv = styled.div`
   box-align: center;
   align-items: center;
 `;
-
-function Nav () {
-    return (
-        <NavDiv>
-        <WrapperContainer>
-          <LogoDiv>
-            <a>
-              <ImgLogo src="/assets/images/favicon.svg" alt="logo" />
-            </a>
-          </LogoDiv>
-          <ButtonDiv>
-            <ADownload
-              href="https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698"
-              target="_blank"
-              rel="noreferrer"
-            >
-              앱 다운로드
-            </ADownload>
-            <ALogin>로그인</ALogin>
-          </ButtonDiv>
-        </WrapperContainer>
-      </NavDiv>
-    )
-}
-export default Nav;

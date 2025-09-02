@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+function Banner1() {
+  return (
+    <Banner>
+      <BannerImgBox>
+        <img src="/assets/images/banner_invite.png" alt="" />
+      </BannerImgBox>
+      <BannerImgBox>
+        <img src="/assets/images/banner_brand.png" alt="" />
+      </BannerImgBox>
+    </Banner>
+  );
+}
+export default Banner1;
+
 export const Banner = styled.div`
   display: flex;
   flex-direction: row;
@@ -27,17 +41,3 @@ export const BannerImgBox = styled.div`
     width: auto;
   }
 `;
-
-function Banner1() {
-    return (
-        <Banner>
-          <BannerImgBox>
-            <img src="/assets/images/banner_invite.png" alt="" />
-          </BannerImgBox>
-          <BannerImgBox>
-            <img src="/assets/images/banner_brand.png" alt="" />
-          </BannerImgBox>
-        </Banner>
-    )
-}
-export default Banner1;

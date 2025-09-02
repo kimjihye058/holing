@@ -1,6 +1,56 @@
 import styled from "styled-components";
 import { useRef, useState } from "react";
 
+function Section2() {
+  const videos = [
+    "/assets/images/video_01.mp4",
+    "/assets/images/video_02.mp4",
+    "/assets/images/video_03.mp4",
+  ];
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleVideoEnd = () => {
+    if (currentVideo < videos.length - 1) {
+      setCurrentVideo(currentVideo + 1);
+    } else {
+      setCurrentVideo(0);
+    }
+  };
+
+  return (
+    <Second>
+      <SpansDiv>
+        <Spans1>초등부터 중·고등까지</Spans1>
+        <Spans2>
+          <Spans2_1>하루 30분</Spans2_1>
+          이면 한 학기 수학을 완성할 수 있어요
+        </Spans2>
+      </SpansDiv>
+      <VideoDiv>
+        <VideoPlayDiv>
+          <video
+            ref={videoRef}
+            key={currentVideo}
+            src={videos[currentVideo]}
+            autoPlay
+            muted
+            playsInline
+            onEnded={handleVideoEnd}
+            style={{
+              width: "100%",
+              display: "block",
+              border: "1px solid rgb(191, 197, 203)",
+            }}
+          />
+          <VideoBottomDiv></VideoBottomDiv>
+        </VideoPlayDiv>
+      </VideoDiv>
+    </Second>
+  );
+}
+export default Section2;
+
 const Second = styled.div`
   display: flex;
   flex-direction: column;
@@ -81,54 +131,3 @@ const VideoBottomDiv = styled.div`
   background: rgb(183, 233, 239);
   bottom: -8px;
 `;
-
-function Section2() {
-
-    const videos = [
-    "/assets/images/video_01.mp4",
-    "/assets/images/video_02.mp4",
-    "/assets/images/video_03.mp4",
-  ];
-  const [currentVideo, setCurrentVideo] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleVideoEnd = () => {
-    if (currentVideo < videos.length - 1) {
-      setCurrentVideo(currentVideo + 1);
-    } else {
-      setCurrentVideo(0);
-    }
-  };
-
-    return (
-        <Second>
-          <SpansDiv>
-            <Spans1>초등부터 중·고등까지</Spans1>
-            <Spans2>
-              <Spans2_1>하루 30분</Spans2_1>
-              이면 한 학기 수학을 완성할 수 있어요
-            </Spans2>
-          </SpansDiv>
-          <VideoDiv>
-            <VideoPlayDiv>
-              <video
-                ref={videoRef}
-                key={currentVideo}
-                src={videos[currentVideo]}
-                autoPlay
-                muted
-                playsInline
-                onEnded={handleVideoEnd}
-                style={{
-                  width: "100%",
-                  display: "block",
-                  border: "1px solid rgb(191, 197, 203)",
-                }}
-              />
-              <VideoBottomDiv></VideoBottomDiv>
-            </VideoPlayDiv>
-          </VideoDiv>
-        </Second>
-    )
-}
-export default Section2;
