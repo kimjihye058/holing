@@ -51,19 +51,55 @@ function Section3() {
         </Step1>
         <Step2>
           <Photos></Photos>
-          <Descs></Descs>
+          <Descs>
+            <StepNumber>
+              <StepNumberSpan>2</StepNumberSpan>
+            </StepNumber>
+            <Desc1>
+              <Desc1_1>개념과 유형을 모두 잡는</Desc1_1>
+              <Desc1_2>단계별 구성</Desc1_2>
+            </Desc1>
+            <Desc2>기초 개념부터 마무리까지 정해진 구성을 따라 학습하면서 단원을 마스터해보세요.</Desc2>
+          </Descs>
         </Step2>
         <Step1>
           <Photos></Photos>
-          <Descs></Descs>
+          <Descs>
+            <StepNumber>
+              <StepNumberSpan>3</StepNumberSpan>
+            </StepNumber>
+            <Desc1>
+              <Desc1_1>실력을 업그레이드하는</Desc1_1>
+              <Desc1_2>레벨업 학습</Desc1_2>
+            </Desc1>
+            <Desc2>레벨을 점점 올리면서 난이도 높은 문제를 풀고, 내 실력도 함께 높여보세요.</Desc2>
+          </Descs>
         </Step1>
         <Step2>
           <Photos></Photos>
-          <Descs></Descs>
+          <Descs>
+            <StepNumber>
+              <StepNumberSpan>4</StepNumberSpan>
+            </StepNumber>
+            <Desc1>
+              <Desc1_1>취약유형을 클리어하는</Desc1_1>
+              <Desc1_2>챌린지 학습</Desc1_2>
+            </Desc1>
+            <Desc2>AI 학습 분석으로 현재 실력을 진단하고, 부족한 유형을 보완해 보세요.</Desc2>
+          </Descs>
         </Step2>
         <Step1>
           <Photos></Photos>
-          <Descs></Descs>
+          <Descs>
+            <StepNumber>
+              <StepNumberSpan>5</StepNumberSpan>
+            </StepNumber>
+            <Desc1>
+              <Desc1_1>의욕과 재미를 더하는</Desc1_1>
+              <Desc1_2>학습 보상</Desc1_2>
+            </Desc1>
+            <Desc2>학습 목표를 달성해 루비를 모으고 게임도 참여하면서 즐겁게 공부해 보세요.</Desc2>
+          </Descs>
         </Step1>
       </Steps>
     </Third>
