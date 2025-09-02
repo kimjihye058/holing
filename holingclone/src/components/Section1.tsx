@@ -135,6 +135,7 @@ export const CloudTextWrapper = styled.div`
   color: #000;
   min-width: 260px;
   min-height: 80px;
+  z-index: 0;
 
   &::before {
     content: "";
@@ -145,12 +146,7 @@ export const CloudTextWrapper = styled.div`
     height: 114px;
     background: url("/assets/images/cloud.svg") no-repeat center/contain;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
   }
 `;
