@@ -39,9 +39,9 @@ export const SpansDiv = styled.div`
 `;
 
 export const Span1 = styled.span`
-  font-family: SUIT;
+  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 500;
   color: inherit;
   text-align: center;
   width: unset;
@@ -50,7 +50,7 @@ export const Span1 = styled.span`
 `;
 
 export const Span2 = styled.span`
-  font-family: inherit;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 48px;
   font-weight: 300;
   color: inherit;
@@ -61,7 +61,7 @@ export const Span2 = styled.span`
 `;
 
 export const Span2_1 = styled.span`
-  font-family: inherit;
+  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 48px;
   font-weight: 500;
   color: var(--point_01);
