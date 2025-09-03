@@ -7,7 +7,65 @@ function Footer() {
       <FooterDiv>
         <FooterConDiv>
           <LeftDiv>
-            <DescDiv></DescDiv>
+            <DescDiv>
+              <img
+                src="/assets/images/footer/company_logo.svg"
+                alt=""
+                width={225}
+              />
+              <ContectDivs>
+                <ContectDiv>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 24 24"
+                    color="#3395BA"
+                    height="20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 2C6.486 2 2 6.486 2 12v4.143C2 17.167 2.897 18 4 18h1a1 1 0 0 0 1-1v-5.143a1 1 0 0 0-1-1h-.908C4.648 6.987 7.978 4 12 4s7.352 2.987 7.908 6.857H19a1 1 0 0 0-1 1V18c0 1.103-.897 2-2 2h-2v-1h-4v3h6c2.206 0 4-1.794 4-4 1.103 0 2-.833 2-1.857V12c0-5.514-4.486-10-10-10z"></path>
+                  </svg>
+                  <a
+                    href="https://pf.kakao.com/_xeviMn/chat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      textDecoration: "none",
+                      color: "inherit",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <ContectSpan>카카오톡 문의하기</ContectSpan>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 24 24"
+                      color="#316c82"
+                      height="16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M10 3V5H5V19H19V14H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3 3 3.44772 3 4H10ZM17.7071 7.70711L12 13.4142L10.5858 12L16.2929 6.29289L13 3H21V11L17.7071 7.70711Z"></path>
+                    </svg>
+                  </a>
+                </ContectDiv>
+                <ContectDiv>
+                  <img src="/assets/images/footer/email.svg" alt="" />
+                  <ContectSpan>help@matholic.net</ContectSpan>
+                </ContectDiv>
+                <ContectDiv>
+                  <img src="/assets/images/footer/location.svg" alt="" />
+                  <ContectSpan>
+                    서울특별시 강남구 남부순환로351길 4, STAY 77, 3층
+                  </ContectSpan>
+                </ContectDiv>
+              </ContectDivs>
+            </DescDiv>
             <DescDiv>
               <CompanySpan>© 2025 Matholic Inc.</CompanySpan>
               <CompanyDescDiv>
@@ -127,6 +185,30 @@ export const DescDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+`;
+
+export const ContectDivs = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+export const ContectDiv = styled.div`
+  padding: 0px 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+`;
+
+export const ContectSpan = styled.span`
+  font-family: SUIT;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(49, 108, 130);
+  text-align: inherit;
+  width: unset;
+  white-space: break-spaces;
+  line-height: inherit;
 `;
 
 export const CompanySpan = styled.span`
