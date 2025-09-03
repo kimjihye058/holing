@@ -57,12 +57,38 @@ function Section5() {
   );
 }
 export default Section5;
+export const Fifth = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  box-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 120px 0px;
+`;
 
-export const Fifth = styled.div``;
+export const Span1 = styled.span`
+  font-family: Maplestory;
+  font-size: 48px;
+  font-weight: 300;
+  color: rgb(18, 22, 25);
+  text-align: center;
+  width: unset;
+  white-space: normal;
+  line-height: 1.4;
+`;
 
-export const Span1 = styled.span``;
-
-export const Span2 = styled.span``;
+export const Span2 = styled.span`
+  font-family: inherit;
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--point_01);
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: inherit;
+  -webkit-text-stroke: 0.3px rgb(0, 171, 21);
+`;
 
 export const Cards = styled.div``;
 
