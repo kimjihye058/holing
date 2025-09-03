@@ -6,7 +6,7 @@ function Section4() {
       <Span1>
         홀링으로 공부하면
         <br />
-        수학<Span2>실력이 오르는</Span2> 이유
+        수학 <Span2>실력이 오르는</Span2> 이유
       </Span1>
       <Reasons>
         <Reason>
@@ -31,11 +31,36 @@ function Section4() {
 }
 export default Section4;
 
-export const Fourth = styled.div``;
+export const Fourth = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+  padding: 120px 0px;
+  background: rgb(246, 247, 249);
+`;
 
-export const Span1 = styled.span``;
+export const Span1 = styled.span`
+  font-family: Maplestory;
+  font-size: 48px;
+  font-weight: 300;
+  color: #121619;
+  text-align: center;
+  width: unset;
+  white-space: normal;
+  line-height: 1.4;
+`;
 
-export const Span2 = styled.span``;
+export const Span2 = styled.span`
+  font-family: inherit;
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--point_01);
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: inherit;
+`;
 
 export const Reasons = styled.div``;
 
