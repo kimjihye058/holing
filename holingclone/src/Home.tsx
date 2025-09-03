@@ -9,6 +9,8 @@ import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
 import Banner2 from "./components/Banner2";
 import Section6 from "./components/Section6";
+import Banner3 from "./components/Banner3";
+import Section7 from "./components/Section7";
 
 function Home() {
   return (
@@ -23,6 +25,8 @@ function Home() {
         <Section5 />
         <Banner2 />
         <Section6 />
+        <Banner3 />
+        <Section7 />
       </Main>
     </>
   );
