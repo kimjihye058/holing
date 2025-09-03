@@ -11,6 +11,7 @@ import Banner2 from "./components/Banner2";
 import Section6 from "./components/Section6";
 import Banner3 from "./components/Banner3";
 import Section7 from "./components/Section7";
+import Footer from "./components/footer";
 
 function Home() {
   return (
@@ -28,6 +29,7 @@ function Home() {
         <Banner3 />
         <Section7 />
       </Main>
+    <Footer />
     </>
   );
 }
