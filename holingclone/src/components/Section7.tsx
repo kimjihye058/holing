@@ -20,7 +20,9 @@ function Section7() {
                 <img src="/assets/images/services/title_sep" alt="" />
                 <ServiceTitleSpan>매쓰홀릭T</ServiceTitleSpan>
               </ServiceTitleDiv>
-              <ServiceWhen>학원, 학교에서 학생들의 학습을 분석하고 관리할 때</ServiceWhen>
+              <ServiceWhen>
+                학원, 학교에서 학생들의 학습을 분석하고 관리할 때
+              </ServiceWhen>
               <ServiceDescSpan>
                 교과서, 참고서의 유사 문제를 만들고 학생별 취약유형을 분석해
                 맞춤 학습을 진행하세요.
@@ -56,11 +58,37 @@ function Section7() {
 }
 export default Section7;
 
-export const Seventh = styled.div``;
+export const Seventh = styled.div`
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  background: rgb(223, 245, 254);
+`;
 
-export const SeventhDiv = styled.div``;
+export const SeventhDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  background: white;
+  padding: 100px 0px;
+`;
 
-export const Span = styled.span``;
+export const Span = styled.span`
+  width: unset;
+  white-space: normal;
+  color: rgb(37, 37, 37);
+  text-align: center;
+  font-family: Maplestory;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
 
 export const Services = styled.div``;
 
