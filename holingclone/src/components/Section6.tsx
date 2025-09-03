@@ -17,16 +17,34 @@ function Section6() {
             초등, 중등, 고등의 1,2학기 전체 과정을 모두 이용할 수 있어요.
           </Answer>
         </Question>
-        
       </QaADiv>
     </Sixth>
   );
 }
 export default Section6;
 
-export const Sixth = styled.div``;
+export const Sixth = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 120px 40px;
+  background: rgb(246, 247, 249);
+`;
 
-export const TitleSpan = styled.span``;
+export const TitleSpan = styled.span`
+  font-family: Maplestory;
+  font-size: 48px;
+  font-weight: 300;
+  color: inherit;
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: 1.4;
+  -webkit-text-stroke: 0.3px black;
+`;
 
 export const QaADiv = styled.div``;
 
