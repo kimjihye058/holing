@@ -4,6 +4,9 @@ function Footer() {
   return (
     <Foot>
       <FlowDiv />
+      <FooterDiv>
+        <FooterConDiv></FooterConDiv>
+      </FooterDiv>
     </Foot>
   );
 }
@@ -33,4 +36,28 @@ export const FlowDiv = styled.div`
       background-position: -10000px 0;
     }
   }
+`;
+
+export const FooterDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  background: #c1e9f8;
+`;
+
+export const FooterConDiv = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  height: 384px;
+  padding: 40px;
+  background: rgb(193, 233, 248);
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
