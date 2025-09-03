@@ -11,19 +11,15 @@ function Section4() {
       <Reasons>
         <Reason>
           <DescDiv>
-            <DescSpan>
-              30억 누적 데이터가 안내하는 학습 경로로 더 빠르게
-            </DescSpan>
+            <DescSpan>30억 누적 데이터가 안내하는<br />학습 경로로 더 빠르게</DescSpan>
           </DescDiv>
-          <DescImg src="/assets/images/reason/reason1.svg" alt="이유1" />
+          <img src="/assets/images/reason/reason1.svg" alt="이유1" />
         </Reason>
         <Reason>
           <DescDiv>
-            <DescSpan>
-              학교 현장에서 인정받는 학습 내용으로 더 촘촘하게
-            </DescSpan>
+            <DescSpan>학교 현장에서 인정받는<br />학습 내용으로 더 촘촘하게</DescSpan>
           </DescDiv>
-          <DescImg src="/assets/images/reason/reason2.svg" alt="이유2" />
+          <img src="/assets/images/reason/reason2.svg" alt="이유2" />
         </Reason>
       </Reasons>
     </Fourth>
@@ -62,12 +58,40 @@ export const Span2 = styled.span`
   line-height: inherit;
 `;
 
-export const Reasons = styled.div``;
+export const Reasons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  box-pack: center;
+  justify-content: center;
+`;
 
-export const Reason = styled.div``;
+export const Reason = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 450px;
+`;
 
-export const DescDiv = styled.div``;
+export const DescDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  -webkit-box-align: center;
+  align-items: center;
+`;
 
-export const DescSpan = styled.span``;
-
-export const DescImg = styled.img``;
+export const DescSpan = styled.span`
+  font-family: Maplestory;
+  font-size: 34px;
+  font-weight: 300;
+  color: inherit;
+  text-align: center;
+  width: unset;
+  white-space: break-spaces;
+  line-height: 1.4;
+  letter-spacing: -0.68px;
+  -webkit-text-stroke: 0.2px black;
+`;
