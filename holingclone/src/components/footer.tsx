@@ -6,9 +6,37 @@ function Footer() {
       <FlowDiv />
       <FooterDiv>
         <FooterConDiv>
+          <LeftDiv>
+            <DescDiv></DescDiv>
+            <DescDiv>
+              <CompanySpan>© 2025 Matholic Inc.</CompanySpan>
+              <CompanyDescDiv>
+                <CompanyDescSpan>(주)매쓰홀릭</CompanyDescSpan>
+                <CompanyDotDiv />
+                <CompanyDescSpan>대표이사 강지훈, 김영희</CompanyDescSpan>
+                <CompanyDotDiv />
+                <CompanyDescSpan>사업자등록번호 119-86-42991</CompanyDescSpan>
+                <CompanyDotDiv />
+                <CompanyDescSpan>
+                  통신판매업신고 2025-서울강남-04724
+                </CompanyDescSpan>
+              </CompanyDescDiv>
+              <CompanyDescDiv>
+                <a href="https://parking.matholic.com/policy/service">
+                  <CompanyPolicySpan>이용약관</CompanyPolicySpan>
+                </a>
+                <a href="https://parking.matholic.com/policy/privacy">
+                  <CompanyPolicySpan>개인정보처리방침</CompanyPolicySpan>
+                </a>
+                <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1198642991">
+                  <CompanyPolicySpan>사업자정보</CompanyPolicySpan>
+                </a>
+              </CompanyDescDiv>
+            </DescDiv>
+          </LeftDiv>
           <RightDiv>
             <Download>
-              <a href="https://apps.apple.com/kr/app/%ED%92%80%EB%9E%AD/id6478107698">
+              <a href="https://apps.apple.com/kr/app/%ED%92%80%EB%9E%AD/https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698">
                 <DownBtnDiv>iOS 앱 다운로드</DownBtnDiv>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.matholic.pullang">
@@ -85,6 +113,62 @@ export const FooterConDiv = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   align-items: flex-start;
+`;
+
+export const LeftDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+`;
+
+export const DescDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+export const CompanySpan = styled.span`
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(66, 123, 145);
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: inherit;
+`;
+
+export const CompanyDescDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  -webkit-box-align: center;
+  align-items: center;
+`;
+
+export const CompanyDescSpan = styled.span`
+  color: rgb(88, 145, 166);
+  font-family: SUIT;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+`;
+
+export const CompanyDotDiv = styled.div`
+  width: 6px;
+  height: 6px;
+  background: rgb(146, 211, 235);
+  border-radius: 6px;
+`;
+
+export const CompanyPolicySpan = styled.span`
+  color: rgb(122, 175, 194);
+  font-family: SUIT;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
 `;
 
 export const RightDiv = styled.div`
