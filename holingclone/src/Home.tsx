@@ -16,31 +16,43 @@ import Footer from "./components/footer";
 function Home() {
   return (
     <>
-      <Nav />
-      <Main>
-        <Section1 />
-        <Banner1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Banner2 />
-        <Section6 />
-        <Banner3 />
-        <Section7 />
-      </Main>
-    <Footer />
+      <Body>
+        <Nav />
+        <Main>
+          <Section1 />
+          <Banner1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+          <Banner2 />
+          <Section6 />
+          <Banner3 />
+          <Section7 />
+        </Main>
+        <Footer />
+      </Body>
     </>
   );
 }
 export default Home;
 
-const Main = styled.div`
+export const Main = styled.div`
   margin-top: 80px;
   min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   box-align: center;
+  align-items: center;
+`;
+
+export const Body = styled.div`
+  width: 100%;
+  height: 100vh;
+  background: rgb(251, 251, 251);
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
 `;
