@@ -1,6 +1,22 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 function Section1() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  const buttonElement = <TryButton href="">무료체험 시작하기</TryButton>;
+
   return (
     <First>
       <FirstLeft>
@@ -10,10 +26,10 @@ function Section1() {
           동영상 강의, 문제풀이, 오답학습까지
           <br /> 혼자서도 알차고 탄탄하게 공부해요
         </Desc>
-        <TryButton href="">무료체험 시작하기</TryButton>
+        {!isMobile && buttonElement}
       </FirstLeft>
       <FirstRight>
-        <img
+        <ScrollImg
           src="/assets/images/main/scroll.svg"
           alt=""
           height={516}
@@ -21,15 +37,27 @@ function Section1() {
         />
         <CloudTextWrapper>
           <img src="/assets/images/main/tablet.svg" alt="" />
-          <GraySpan style={{ textAlign: "center" }}>
-            홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan> 에서 <br />
-            다운로드 및 이용 가능
+          <GraySpan>
+            {isMobile ? (
+              <>
+                홀링 앱은 <br />
+                <GreenSpan>태블릿, 스마트폰</GreenSpan> 에서 <br />
+                다운로드 및 이용 가능
+              </>
+            ) : (
+              <>
+                홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan> 에서 <br />
+                다운로드 및 이용 가능
+              </>
+            )}
           </GraySpan>
         </CloudTextWrapper>
       </FirstRight>
+      {isMobile && buttonElement}
     </First>
   );
 }
+
 export default Section1;
 
 export const First = styled.div`
@@ -47,6 +75,13 @@ export const First = styled.div`
   background-repeat: no-repeat;
   background-position: center top;
   background-size: auto;
+  @media (max-width: 800px) {
+    background-color: rgb(208, 241, 253);
+    background-image: none;
+    padding: 80px 0px;
+    flex-direction: column;
+    gap: 50px;
+  }
 `;
 
 export const Title = styled.span`
@@ -58,9 +93,9 @@ export const Title = styled.span`
   width: unset;
   white-space: normal;
   line-height: 1.5;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
+  @media (max-width: 800px) {
+    font-size: 22px;
+    text-align: center;
   }
 `;
 
@@ -74,20 +109,23 @@ export const Brand = styled.span`
   white-space: normal;
   line-height: inherit;
   -webkit-text-stroke: 2px black;
-  @media (max-width: 768px) {
-    font-size: 32px;
+  @media (max-width: 800px) {
+    font-size: 52px;
+    text-align: center;
   }
 `;
 
 export const Desc = styled.span`
   font-size: 24px;
   font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
   color: #757e85;
   display: block;
   margin-top: 28px;
   line-height: 1.6;
-  @media (max-width: 768px) {
-    font-size: 14px;
+  @media (max-width: 800px) {
+    font-size: 18px;
+    text-align: center;
   }
 `;
 
@@ -112,9 +150,12 @@ export const TryButton = styled.a`
   line-height: normal;
   letter-spacing: 0.52px;
   margin: 80px 0px 0px;
-  @media (max-width: 768px) {
-    font-size: 16px;
-    padding: 14px 28px;
+  @media (max-width: 800px) {
+    width: 280px;
+    height: 77px;
+    font-size: 22px;
+    padding-top: 18px;
+    margin: 0;
   }
 
   padding-top: 25px;
@@ -127,6 +168,11 @@ export const FirstLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  @media (max-width: 800px) {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 `;
 
 export const FirstRight = styled.div`
@@ -135,15 +181,31 @@ export const FirstRight = styled.div`
   box-align: center;
   align-items: center;
 `;
+
+export const ScrollImg = styled.img`
+  height: 516px;
+  width: auto;
+  position: relative;
+
+  @media (max-width: 800px) {
+    height: 290px;
+    max-width: 100%;
+  }
+`;
+
 export const GraySpan = styled.span`
   font-family: inherit;
   font-size: 16px;
   font-weight: 300;
   color: rgb(74, 78, 83);
-  text-align: inherit;
+  text-align: center;
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 14px;
+    text-align: unset;
+  }
 `;
 
 export const GreenSpan = styled.span`
@@ -155,6 +217,9 @@ export const GreenSpan = styled.span`
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `;
 
 export const CloudTextWrapper = styled.div`
@@ -170,4 +235,13 @@ export const CloudTextWrapper = styled.div`
   width: 436px;
   height: 114px;
   padding: 35px 28px 35px 49px;
+  @media (max-width: 800px) {
+    width: 320px;
+    height: 83px;
+    padding: 21px 62px 20px;
+
+    img {
+      width: 47px;
+    }
+  }
 `;

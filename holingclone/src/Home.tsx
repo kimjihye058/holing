@@ -49,7 +49,6 @@ export const Main = styled.div`
 
 export const Body = styled.div`
   width: 100%;
-  height: 100vh;
   background: rgb(251, 251, 251);
   display: flex;
   flex-direction: column;
