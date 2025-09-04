@@ -71,25 +71,32 @@ const SpansDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  box-align: center;
+  -webkit-box-align: center;
   align-items: center;
 `;
 
 const Spans1 = styled.span`
-  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: SUIT;
   font-size: 30px;
   font-weight: 500;
-  color: #000;
+  color: inherit;
   text-align: center;
   width: unset;
   white-space: break-spaces;
   line-height: 1.5;
+  -webkit-text-stroke: 0.2px black;
 `;
 
 const Spans2 = styled.span`
+  font-family: Maplestory;
   font-size: 48px;
-  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: #121619;
+  font-weight: 300;
+  color: rgb(18, 22, 25);
+  text-align: center;
+  width: unset;
+  white-space: normal;
+  line-height: 1.4;
+  -webkit-text-stroke: 0.3px black;
 `;
 
 const Spans2_1 = styled.span`
