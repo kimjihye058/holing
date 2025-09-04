@@ -13,13 +13,18 @@ function Section1() {
         <TryButton href="">무료체험 시작하기</TryButton>
       </FirstLeft>
       <FirstRight>
-        <img src="/assets/images/main/scroll.svg" alt="" />
+        <img
+          src="/assets/images/main/scroll.svg"
+          alt=""
+          height={516}
+          style={{ position: "relative" }}
+        />
         <CloudTextWrapper>
           <img src="/assets/images/main/tablet.svg" alt="" />
-          <span style={{ fontSize: 16, fontFamily: "Maplestory" }}>
-            홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan>에서 <br />
+          <GraySpan style={{ textAlign: "center" }}>
+            홀링 앱은 <GreenSpan>태블릿, 스마트폰</GreenSpan> 에서 <br />
             다운로드 및 이용 가능
-          </span>
+          </GraySpan>
         </CloudTextWrapper>
       </FirstRight>
     </First>
@@ -74,6 +79,7 @@ export const Desc = styled.span`
   color: #757e85;
   display: block;
   margin-top: 28px;
+  line-height: 1.6;
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -81,8 +87,8 @@ export const Desc = styled.span`
 
 export const TryButton = styled.a`
   display: flex;
-  width: 200px;
-  height: 50px;
+  width: 320px;
+  height: 88px;
   flex-direction: column;
   box-align: center;
   align-items: center;
@@ -104,6 +110,10 @@ export const TryButton = styled.a`
     font-size: 16px;
     padding: 14px 28px;
   }
+
+  padding-top: 25px;
+  gap: 8.723px;
+  transition: transform 0.2s ease-in-out;
 `;
 
 export const FirstLeft = styled.div`
@@ -119,34 +129,39 @@ export const FirstRight = styled.div`
   box-align: center;
   align-items: center;
 `;
+export const GraySpan = styled.span`
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(74, 78, 83);
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: inherit;
+`;
 
 export const GreenSpan = styled.span`
   color: #00ab15;
-  font-weight: 700;
-  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: inherit;
 `;
 
 export const CloudTextWrapper = styled.div`
-  position: relative;
   display: flex;
+  flex-direction: row;
+  gap: 8px;
+  -webkit-box-align: center;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #000;
-  min-width: 260px;
-  min-height: 80px;
-  z-index: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 436px;
-    height: 114px;
-    background: url("/assets/images/main/cloud.svg") no-repeat center/contain;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-  }
+  background-image: url(/assets/images/main/cloud.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 436px;
+  height: 114px;
+  padding: 35px 28px 35px 49px;
 `;
