@@ -34,8 +34,6 @@ export const NavDiv = styled.nav`
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1000;
 `;
 
@@ -46,7 +44,7 @@ export const ImgLogo = styled.img`
 
 export const ADownload = styled.a`
   display: flex;
-  height: 30px;
+  height: 40px;
   padding: 8px 30px 0px;
   box-pack: center;
   justify-content: center;
@@ -76,13 +74,12 @@ export const ALogin = styled.a`
 
 export const WrapperContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px 40px;
+  max-width: 1280px;
 `;
 
 export const LogoDiv = styled.div`
