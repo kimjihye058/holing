@@ -28,13 +28,14 @@ export default Nav;
 export const NavDiv = styled.nav`
   display: flex;
   background: white;
+  z-index: 100;
   width: 100%;
-  height: 80px;
   border-bottom: 1px solid rgb(230, 231, 234);
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
   position: fixed;
-  z-index: 1000;
 `;
 
 export const ImgLogo = styled.img`
@@ -75,6 +76,7 @@ export const ALogin = styled.a`
 export const WrapperContainer = styled.div`
   display: flex;
   width: 100%;
+  height: 80px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
