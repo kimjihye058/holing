@@ -36,26 +36,28 @@ export const First = styled.div`
   display: flex;
   flex-direction: row;
   gap: 170px;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
   width: 100%;
+  padding: calc(-415px + 50vh) 0px;
   position: relative;
-  background: url(/assets/images/main/bg.png);
+  background-image: url(/assets/images/main/bg.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: auto;
-  padding-top: calc(-415px + 50vh);
-  padding-right: 0px;
-  padding-bottom: calc(-415px + 52vh);
-  padding-left: 0px;
 `;
 
 export const Title = styled.span`
-  color: #000;
+  font-family: SUIT;
   font-size: 30px;
   font-weight: 700;
-  font-family: SUIT, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  display: block;
+  color: inherit;
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: 1.5;
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -63,11 +65,15 @@ export const Title = styled.span`
 `;
 
 export const Brand = styled.span`
-  color: #000;
+  font-family: Maplestory;
   font-size: 90px;
   font-weight: 400;
-  font-family: Maplestory, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  display: block;
+  color: inherit;
+  text-align: inherit;
+  width: unset;
+  white-space: normal;
+  line-height: inherit;
+  -webkit-text-stroke: 2px black;
   @media (max-width: 768px) {
     font-size: 32px;
   }
