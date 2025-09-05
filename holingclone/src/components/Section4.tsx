@@ -29,7 +29,7 @@ function Section4() {
         {reasonsData.map((reason) => (
           <Reason key={reason.id}>
             <DescSpan>{reason.text}</DescSpan>
-            <img src={reason.img} alt={reason.alt} />
+            <img src={reason.img} alt={reason.alt} width="100%" />
           </Reason>
         ))}
       </Reasons>
@@ -45,6 +45,10 @@ export const Fourth = styled.div`
   width: 100%;
   padding: 120px 0px;
   background: rgb(246, 247, 249);
+  @media (max-width: 800px) {
+    padding: 80px 0px;
+    gap: 50px;
+  }
 `;
 
 export const Span1 = styled.span`
@@ -56,6 +60,9 @@ export const Span1 = styled.span`
   width: unset;
   white-space: normal;
   line-height: 1.4;
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
 `;
 
 export const Span2 = styled.span`
@@ -67,6 +74,9 @@ export const Span2 = styled.span`
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
 `;
 
 export const Reasons = styled.div`
@@ -75,6 +85,11 @@ export const Reasons = styled.div`
   gap: 60px;
   box-pack: center;
   justify-content: center;
+  align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 70px;
+  }
 `;
 
 export const Reason = styled.div`
@@ -84,6 +99,10 @@ export const Reason = styled.div`
   -webkit-box-align: center;
   align-items: center;
   width: 450px;
+  @media (max-width: 800px) {
+    width: calc(100% - 80px);
+    gap: 24px;
+  }
 `;
 
 export const DescDiv = styled.div`
@@ -105,4 +124,7 @@ export const DescSpan = styled.span`
   line-height: 1.4;
   letter-spacing: -0.68px;
   -webkit-text-stroke: 0.2px black;
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
