@@ -9,12 +9,20 @@ function Section3() {
         {
           src: "/assets/images/steps/step1_beaver.svg",
           alt: "step1비버",
-          style: { position: "absolute" as const, left: "-55px", bottom: "-22px" },
+          style: {
+            position: "absolute" as const,
+            left: "-55px",
+            bottom: "-22px",
+          },
         },
         {
           src: "/assets/images/steps/step1_overlay.svg",
           alt: "step1오버레이",
-          style: { position: "absolute" as const, right: "-19px", bottom: "96.08px" },
+          style: {
+            position: "absolute" as const,
+            right: "-19px",
+            bottom: "96.08px",
+          },
           width: 264,
         },
       ],
@@ -30,7 +38,11 @@ function Section3() {
         {
           src: "/assets/images/steps/ruby.svg",
           alt: "step2루비",
-          style: { position: "absolute" as const, right: "-73px", bottom: "-30px" },
+          style: {
+            position: "absolute" as const,
+            right: "-73px",
+            bottom: "-30px",
+          },
         },
       ],
       title1: "개념과 유형을 모두 잡는",
@@ -54,7 +66,11 @@ function Section3() {
         {
           src: "/assets/images/steps/step4_beaver.svg",
           alt: "step4비버",
-          style: { position: "absolute" as const, right: "-76px", bottom: "-30px" },
+          style: {
+            position: "absolute" as const,
+            right: "-76px",
+            bottom: "-30px",
+          },
         },
       ],
       title1: "취약유형을 클리어하는",
@@ -69,12 +85,20 @@ function Section3() {
         {
           src: "/assets/images/steps/cloud.svg",
           alt: "step5구름",
-          style: { position: "absolute" as const, left: "-32px", bottom: "94px" },
+          style: {
+            position: "absolute" as const,
+            left: "-32px",
+            bottom: "94px",
+          },
         },
         {
           src: "/assets/images/steps/step5_beaver.svg",
           alt: "step5비버",
-          style: { position: "absolute" as const, right: "-62px", bottom: "-25px" },
+          style: {
+            position: "absolute" as const,
+            right: "-62px",
+            bottom: "-25px",
+          },
         },
       ],
       title1: "의욕과 재미를 더하는",
@@ -88,10 +112,10 @@ function Section3() {
   return (
     <Third>
       <SpansDiv>
-        <Span1>초등 수학 공부, 아이가 잘 따라갈 수 있을까요?</Span1>
+        <Span1>초등 수학 공부, <MobileBr />아이가 잘 따라갈 수 있을까요?</Span1>
         <Span2>
           홀링은
-          <Span2_1> 스스로 끝까지 </Span2_1>
+          <Span2_1> 스스로 끝까지<MobileBr /> </Span2_1>
           해낼 수 있는
           <br />
           습관과 자신감을 길러줘요
@@ -128,7 +152,6 @@ function Section3() {
 
 export default Section3;
 
-
 export const Third = styled.div`
   display: flex;
   flex-direction: column;
@@ -138,6 +161,10 @@ export const Third = styled.div`
   background: white;
   padding-top: 120px;
   padding-bottom: 120px;
+  @media (max-width: 800px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 `;
 
 export const SpansDiv = styled.div`
@@ -146,6 +173,9 @@ export const SpansDiv = styled.div`
   gap: 24px;
   box-align: center;
   align-items: center;
+  @media (max-width: 800px) {
+    gap: 18px;
+  }
 `;
 
 export const Span1 = styled.span`
@@ -157,6 +187,10 @@ export const Span1 = styled.span`
   width: unset;
   white-space: normal;
   line-height: 1.4;
+  @media (max-width: 800px) {
+    font-size: 18px;
+    font-weight: 300;
+  }
 `;
 
 export const Span2 = styled.span`
@@ -169,6 +203,10 @@ export const Span2 = styled.span`
   white-space: normal;
   line-height: inherit;
   margin-bottom: 80px;
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+    font-size: 32px;
+  }
 `;
 
 export const Span2_1 = styled.span`
@@ -180,6 +218,16 @@ export const Span2_1 = styled.span`
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
+`;
+
+const MobileBr = styled.br`
+  display: none;
+  @media (max-width: 800px) {
+    display: block;
+  }
 `;
 
 export const Steps = styled.div`
