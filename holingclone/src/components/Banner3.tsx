@@ -126,4 +126,4 @@ export const Img = styled.img`
   @media (max-width: 800px) {
     width: 175px;
   }
-`;ƒ
+`;
