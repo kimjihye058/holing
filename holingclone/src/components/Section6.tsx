@@ -47,23 +47,21 @@ function Section6() {
             <Question key={idx} onClick={() => toggleQuestion(idx)}>
               <QuesHeader1>
                 <QuesHeader2>
-                  <img
+                  <QuesImg1
                     src={
                       isOpen
                         ? "assets/images/faq/question_opened.svg"
                         : "assets/images/faq/question_collapsed.svg"
                     }
-                    width={44}
                   />
                   <QuesSpan $isOpen={isOpen}>{faq.question}</QuesSpan>
                 </QuesHeader2>
-                <img
+                <QuesImg2
                   src={
                     isOpen
                       ? "assets/images/faq/collapse.svg"
                       : "assets/images/faq/open.svg"
                   }
-                  width={20}
                 />
               </QuesHeader1>
               {isOpen && <Answer>{faq.answer}</Answer>}
@@ -85,6 +83,10 @@ export const Sixth = styled.div`
   width: 100%;
   padding: 120px 40px;
   background: rgb(246, 247, 249);
+  @media (max-width: 800px) {
+    padding: 80px 20px;
+    gap: 50px;
+  }
 `;
 
 export const TitleSpan = styled.span`
@@ -92,6 +94,9 @@ export const TitleSpan = styled.span`
   font-size: 48px;
   font-weight: 300;
   line-height: 1.4;
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
 `;
 
 export const QaADiv = styled.div`
@@ -101,6 +106,9 @@ export const QaADiv = styled.div`
   flex-direction: column;
   gap: 24px;
   width: 100%;
+  @media (max-width: 800px) {
+    gap: 18px;
+  }
 `;
 
 export const Question = styled.div`
@@ -112,18 +120,35 @@ export const Question = styled.div`
   background: #fff;
   cursor: pointer;
   user-select: none;
+  @media (max-width: 800px) {
+    padding: 20px 18px;
+  }
 `;
 
 export const QuesHeader1 = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: row;
+  }
 `;
 
 export const QuesHeader2 = styled.div`
   display: flex;
   gap: 20px;
   align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: row;
+    gap: 8px;
+  }
+`;
+
+export const QuesImg1 = styled.img`
+  width: 44px;
+  @media (max-width: 800px) {
+    width: 24px;
+  }
 `;
 
 export const QuesSpan = styled.span<{ $isOpen: boolean }>`
@@ -131,6 +156,16 @@ export const QuesSpan = styled.span<{ $isOpen: boolean }>`
   font-size: 28px;
   font-weight: 300;
   color: ${({ $isOpen }) => ($isOpen ? "rgb(0, 171, 21)" : "#121619")};
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
+`;
+
+export const QuesImg2 = styled.img`
+  width: 20px;
+  @media (max-width: 800px) {
+    width: 16px;
+  }
 `;
 
 export const Answer = styled.div`
@@ -143,4 +178,8 @@ export const Answer = styled.div`
   font-weight: 500;
   line-height: 160%;
   white-space: break-spaces;
+  @media (max-width: 800px) {
+    padding: 16px;
+    font-size: 16px;
+  }
 `;
