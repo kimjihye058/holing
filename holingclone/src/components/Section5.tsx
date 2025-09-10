@@ -4,7 +4,8 @@ function Section5() {
   return (
     <Fifth>
       <Span1>
-        <Span2>학부모</Span2>가 이야기하는 홀링
+        <Span2>학부모</Span2>가 <MobileBr />
+        이야기하는 홀링
       </Span1>
       <Cards>
         <CardDiv>
@@ -15,12 +16,7 @@ function Section5() {
                 alt=""
                 style={{ width: "100%" }}
               />
-              <img
-                src="/assets/images/parents/quote.svg"
-                alt=""
-                width="50"
-                style={{ position: "relative", top: "-12px" }}
-              />
+              <QuoteImg />
             </ImgDiv>
             <TitleSpan>강의 덕분에 부모 도움이 필요없어요</TitleSpan>
             <HumanDiv>
@@ -41,15 +37,14 @@ function Section5() {
                 src="/assets/images/parents/card2.png"
                 alt=""
                 style={{ width: "100%" }}
-              />{" "}
-              <img
-                src="/assets/images/parents/quote.svg"
-                alt=""
-                width="50"
-                style={{ position: "relative", top: "-12px" }}
-              />{" "}
+              />
+              <QuoteImg />
             </ImgDiv>
-            <TitleSpan>게임처럼 공부하니<br />지루해하지 않아요</TitleSpan>
+            <TitleSpan>
+              게임처럼 공부하니
+              <br />
+              지루해하지 않아요
+            </TitleSpan>
             <HumanDiv>
               <NameSpan>박O영</NameSpan>
               <ParentDiv />
@@ -68,15 +63,14 @@ function Section5() {
                 src="/assets/images/parents/card3.png"
                 alt=""
                 style={{ width: "100%" }}
-              />{" "}
-              <img
-                src="/assets/images/parents/quote.svg"
-                alt=""
-                width="50"
-                style={{ position: "relative", top: "-12px" }}
-              />{" "}
+              />
+              <QuoteImg />
             </ImgDiv>
-            <TitleSpan>아이의 실력을 바로<br />확인할 수 있어요</TitleSpan>
+            <TitleSpan>
+              아이의 실력을 바로
+              <br />
+              확인할 수 있어요
+            </TitleSpan>
             <HumanDiv>
               <NameSpan>김O영</NameSpan>
               <ParentDiv />
@@ -102,6 +96,10 @@ export const Fifth = styled.div`
   align-items: center;
   width: 100%;
   padding: 120px 0px;
+  @media (max-width: 800px) {
+    padding: 80px 0px;
+    gap: 50px;
+  }
 `;
 
 export const Span1 = styled.span`
@@ -113,6 +111,9 @@ export const Span1 = styled.span`
   width: unset;
   white-space: normal;
   line-height: 1.4;
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
 `;
 
 export const Span2 = styled.span`
@@ -124,6 +125,16 @@ export const Span2 = styled.span`
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
+`;
+
+const MobileBr = styled.br`
+  display: none;
+  @media (max-width: 800px) {
+    display: block;
+  }
 `;
 
 export const Cards = styled.div`
@@ -134,6 +145,10 @@ export const Cards = styled.div`
   align-items: center;
   box-pack: center;
   justify-content: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 export const CardDiv = styled.div`
@@ -142,20 +157,26 @@ export const CardDiv = styled.div`
   gap: 20px;
   box-align: center;
   align-items: center;
-  padding: 30px 0px;
+  padding: 30px 40px;
   width: 376px;
   border-radius: 30px;
   background: rgb(255, 255, 255);
   box-shadow: rgba(85, 86, 86, 0.12) 4px 4px 20px 0px;
+  @media (max-width: 800px) {
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+  }
 `;
 
 export const ConDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 296px;
   box-align: center;
   align-items: center;
+  @media (max-width: 800px) {
+    gap: 16px;
+  }
 `;
 
 export const ImgDiv = styled.div`
@@ -163,6 +184,17 @@ export const ImgDiv = styled.div`
   flex-direction: column;
   box-align: center;
   align-items: center;
+`;
+
+export const QuoteImg = styled.img.attrs({
+ src: "/assets/images/parents/quote.svg",
+})`
+  width: 50px;
+  position: relative;
+  top: -12px;
+  @media (max-width: 800px) {
+    width: 36px;
+  }
 `;
 
 export const TitleSpan = styled.span`
@@ -174,6 +206,9 @@ export const TitleSpan = styled.span`
   width: unset;
   white-space: break-spaces;
   line-height: 1.4;
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
 
 export const HumanDiv = styled.div`
@@ -186,6 +221,9 @@ export const HumanDiv = styled.div`
   gap: 10px;
   box-align: center;
   align-items: center;
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
 `;
 
 export const NameSpan = styled.span`
@@ -225,6 +263,8 @@ export const ConSpan = styled.span`
   text-align: center;
   white-space: normal;
   line-height: 1.5;
-    width: 296px;
-
+  width: 296px;
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
 `;

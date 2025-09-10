@@ -8,13 +8,10 @@ function Banner3() {
           <BannerInsideDiv>
             <Span1>
               중·고등 수학은
-              <Span2> 홀링 플러스</Span2>로 똑똑하게 공부하세요
+              <Span2> 홀링 플러스</Span2>로 <MobileBr />
+              똑똑하게 공부하세요
             </Span1>
-            <img
-              src="/assets/images/banner/chalk.svg"
-              alt=""
-              style={{ alignSelf: "flex-end" }}
-            />
+            <Img src="/assets/images/banner/chalk.svg" />
           </BannerInsideDiv>
         </BannerInside>
       </Banner>
@@ -32,6 +29,9 @@ export const BannerDiv = styled.div`
   padding: 120px 40px 0px;
   width: 100%;
   max-width: 1280px;
+  @media (max-width: 800px) {
+    padding: 80px 20px;
+  }
 `;
 
 export const Banner = styled.div`
@@ -44,6 +44,9 @@ export const Banner = styled.div`
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center 0px;
+  @media (max-width: 800px) {
+    height: 180px;
+  }
 `;
 
 export const BannerInside = styled.div`
@@ -75,6 +78,11 @@ export const BannerInsideDiv = styled.div`
   );
   backdrop-filter: blur(1px);
   border-radius: 20px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    -webkit-box-align: end;
+    justify-content: flex-end;
+  }
 `;
 
 export const Span1 = styled.span`
@@ -87,6 +95,9 @@ export const Span1 = styled.span`
   white-space: normal;
   line-height: inherit;
   letter-spacing: -1px;
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
 
 export const Span2 = styled.span`
@@ -98,4 +109,21 @@ export const Span2 = styled.span`
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
+`;
+
+const MobileBr = styled.br`
+  display: none;
+  @media (max-width: 800px) {
+    display: block;
+  }
+`;
+
+export const Img = styled.img`
+  align-self: flex-end;
+  @media (max-width: 800px) {
+    width: 175px;
+  }
 `;

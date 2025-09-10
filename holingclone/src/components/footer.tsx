@@ -1,6 +1,18 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 function Footer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Foot>
       <FlowDiv />
@@ -8,7 +20,7 @@ function Footer() {
         <FooterConDiv>
           <LeftDiv>
             <DescDiv>
-              <img
+              <ComImg
                 src="/assets/images/footer/company_logo.svg"
                 alt=""
                 width={225}
@@ -63,7 +75,8 @@ function Footer() {
                 <ContectDiv>
                   <img src="/assets/images/footer/location.svg" alt="" />
                   <ContectSpan>
-                    서울특별시 강남구 남부순환로351길 4, STAY 77, 3층
+                    서울특별시 강남구 남부순환로351길 4, <MobileBr />
+                    STAY 77, 3층
                   </ContectSpan>
                 </ContectDiv>
               </ContectDivs>
@@ -71,9 +84,11 @@ function Footer() {
             <DescDiv>
               <CompanySpan>© 2025 Matholic Inc.</CompanySpan>
               <CompanyDescDiv>
-                <CompanyDescSpan>(주)매쓰홀릭</CompanyDescSpan>
-                <CompanyDotDiv />
-                <CompanyDescSpan>대표이사 강지훈, 김영희</CompanyDescSpan>
+                <CompanyDescDiv2>
+                  <CompanyDescSpan>(주)매쓰홀릭</CompanyDescSpan>
+                  <CompanyDotDiv2 />
+                  <CompanyDescSpan>대표이사 강지훈, 김영희</CompanyDescSpan>
+                </CompanyDescDiv2>
                 <CompanyDotDiv />
                 <CompanyDescSpan>사업자등록번호 119-86-42991</CompanyDescSpan>
                 <CompanyDotDiv />
@@ -81,29 +96,33 @@ function Footer() {
                   통신판매업신고 2025-서울강남-04724
                 </CompanyDescSpan>
               </CompanyDescDiv>
-              <CompanyDescDiv>
+              <CompanyDescDiv2>
                 <a href="https://parking.matholic.com/policy/service">
                   <CompanyPolicySpan>이용약관</CompanyPolicySpan>
                 </a>
-                <CompanyDotDiv />
+                <CompanyDotDiv2 />
                 <a href="https://parking.matholic.com/policy/privacy">
                   <CompanyPolicySpan>개인정보처리방침</CompanyPolicySpan>
                 </a>
-                <CompanyDotDiv />
+                <CompanyDotDiv2 />
                 <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1198642991">
                   <CompanyPolicySpan>사업자정보</CompanyPolicySpan>
                 </a>
-              </CompanyDescDiv>
+              </CompanyDescDiv2>
             </DescDiv>
           </LeftDiv>
           <RightDiv>
             <Download>
-              <a href="https://apps.apple.com/kr/app/%ED%92%80%EB%9E%AD/https://apps.apple.com/kr/app/%ED%99%80%EB%A7%81-%EC%88%98%ED%95%99%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%95%B1/id6478107698">
-                <DownBtnDiv>iOS 앱 다운로드</DownBtnDiv>
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.matholic.pullang">
-                <DownBtnDiv>Android 앱 다운로드</DownBtnDiv>
-              </a>
+              {!isMobile && (
+                <>
+                  <a href="https://apps.apple.com/...">
+                    <DownBtnDiv>iOS 앱 다운로드</DownBtnDiv>
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.matholic.pullang">
+                    <DownBtnDiv>Android 앱 다운로드</DownBtnDiv>
+                  </a>
+                </>
+              )}
             </Download>
             <Sns>
               <a href="https://blog.naver.com/ilovematholic">
@@ -151,6 +170,10 @@ export const FlowDiv = styled.div`
       background-position: -10000px 0;
     }
   }
+  @media (max-width: 800px) {
+    height: 22px;
+    background-repeat: repeat-x;
+  }
 `;
 
 export const FooterDiv = styled.div`
@@ -175,6 +198,14 @@ export const FooterConDiv = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   align-items: flex-start;
+  @media (max-width: 800px) {
+    height: 549px;
+    padding: 60px 18px;
+    flex-direction: column;
+    -webkit-box-align: start;
+    justify-content: flex-start;
+    gap: 36px;
+  }
 `;
 
 export const LeftDiv = styled.div`
@@ -183,12 +214,24 @@ export const LeftDiv = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   height: 100%;
+  @media (max-width: 800px) {
+    gap: 36px;
+  }
 `;
 
 export const DescDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media (max-width: 800px) {
+    gap: 14px;
+  }
+`;
+
+export const ComImg = styled.img`
+  @media (max-width: 800px) {
+    margin-bottom: 22px;
+  }
 `;
 
 export const ContectDivs = styled.div`
@@ -213,6 +256,18 @@ export const ContectSpan = styled.span`
   width: unset;
   white-space: break-spaces;
   line-height: inherit;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+`;
+
+const MobileBr = styled.br`
+  display: none;
+  @media (max-width: 800px) {
+    display: block;
+  }
 `;
 
 export const CompanySpan = styled.span`
@@ -224,6 +279,9 @@ export const CompanySpan = styled.span`
   width: unset;
   white-space: normal;
   line-height: inherit;
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `;
 
 export const CompanyDescDiv = styled.div`
@@ -232,6 +290,22 @@ export const CompanyDescDiv = styled.div`
   gap: 10px;
   -webkit-box-align: center;
   align-items: center;
+  @media (max-width: 800px) {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+`;
+
+export const CompanyDescDiv2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  -webkit-box-align: center;
+  align-items: center;
+  @media (max-width: 800px) {
+    gap: 6px;
+  }
 `;
 
 export const CompanyDescSpan = styled.span`
@@ -240,6 +314,10 @@ export const CompanyDescSpan = styled.span`
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
+  @media (max-width: 800px) {
+    font-size: 12px;
+    font-weight: 500;
+  }
 `;
 
 export const CompanyDotDiv = styled.div`
@@ -247,6 +325,20 @@ export const CompanyDotDiv = styled.div`
   height: 6px;
   background: rgb(146, 211, 235);
   border-radius: 6px;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+export const CompanyDotDiv2 = styled.div`
+  width: 6px;
+  height: 6px;
+  background: rgb(146, 211, 235);
+  border-radius: 6px;
+  @media (max-width: 800px) {
+    width: 4px;
+    height: 4px;
+  }
 `;
 
 export const CompanyPolicySpan = styled.span`
@@ -255,18 +347,28 @@ export const CompanyPolicySpan = styled.span`
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
+  @media (max-width: 800px) {
+    font-size: 12px;
+    font-weight: 500;
+  }
 `;
 
 export const RightDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media (max-width: 800px) {
+    gap: 0;
+  }
 `;
 
 export const Download = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media (max-width: 800px) {
+    flex-direction: row;
+  }
 `;
 
 export const DownBtnDiv = styled.div`
