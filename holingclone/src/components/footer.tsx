@@ -13,7 +13,7 @@ function Footer() {
                 alt=""
                 width={225}
               />
-              <ContectDivs>
+              <ContectDivs style={{ padding: "10px 0px" }}>
                 <ContectDiv>
                   <svg
                     stroke="currentColor"
@@ -37,6 +37,8 @@ function Footer() {
                       textDecoration: "none",
                       color: "inherit",
                       cursor: "pointer",
+                      flexDirection: "row",
+                      gap: "4px",
                     }}
                   >
                     <ContectSpan>카카오톡 문의하기</ContectSpan>
@@ -83,9 +85,11 @@ function Footer() {
                 <a href="https://parking.matholic.com/policy/service">
                   <CompanyPolicySpan>이용약관</CompanyPolicySpan>
                 </a>
+                <CompanyDotDiv />
                 <a href="https://parking.matholic.com/policy/privacy">
                   <CompanyPolicySpan>개인정보처리방침</CompanyPolicySpan>
                 </a>
+                <CompanyDotDiv />
                 <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1198642991">
                   <CompanyPolicySpan>사업자정보</CompanyPolicySpan>
                 </a>

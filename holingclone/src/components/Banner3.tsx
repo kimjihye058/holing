@@ -8,9 +8,13 @@ function Banner3() {
           <BannerInsideDiv>
             <Span1>
               중·고등 수학은
-              <Span2>홀링 플러스</Span2>로 똑똑하게 공부하세요
+              <Span2> 홀링 플러스</Span2>로 똑똑하게 공부하세요
             </Span1>
-            <img src="/assets/images/banner/chalk.svg" alt="" />
+            <img
+              src="/assets/images/banner/chalk.svg"
+              alt=""
+              style={{ alignSelf: "flex-end" }}
+            />
           </BannerInsideDiv>
         </BannerInside>
       </Banner>

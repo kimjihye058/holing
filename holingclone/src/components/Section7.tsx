@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 
 const servicesData = [
   {
@@ -30,7 +31,7 @@ const servicesData = [
     img: "/assets/images/services/service_02.png",
     titles: ["연산대장"],
     when: "수학 연산 훈련이 필요할 때",
-    desc: `연산 문제를 학년별 계산력/문장제 문제지를 만들고 
+    desc: `학년별 계산력/문장제 문제지를 만들고 
 반복 학습으로 연산 능력을 키워보세요.`,
     advantages: [
       "/assets/images/services/b2b.svg",
@@ -88,8 +89,8 @@ function Section7() {
               >
                 <ServiceTitleDiv>
                   {service.titles.map((title, idx) => (
-                    <ServiceTitleSpan key={idx}>
-                      {title}
+                    <React.Fragment key={idx}>
+                      <ServiceTitleSpan>{title}</ServiceTitleSpan>
                       {idx < service.titles.length - 1 && (
                         <img
                           src="/assets/images/services/title_sep.svg"
@@ -97,9 +98,10 @@ function Section7() {
                           width={"auto"}
                         />
                       )}
-                    </ServiceTitleSpan>
+                    </React.Fragment>
                   ))}
                 </ServiceTitleDiv>
+
                 <ServiceWhen>{service.when}</ServiceWhen>
                 <ServiceDescSpan>{service.desc}</ServiceDescSpan>
                 <Advantages>
@@ -107,7 +109,7 @@ function Section7() {
                     <img key={idx} src={adv} alt="" width={100} />
                   ))}
                 </Advantages>
-                <ButtonsDiv style={{marginTop: "65px"}}>
+                <ButtonsDiv style={{ marginTop: "65px" }}>
                   {service.buttons.map((btn, idx) => (
                     <Button key={idx} href={btn.href}>
                       <ButtonSpans>

@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+const reasonsData = [
+  {
+    id: 1,
+    text: `30억 누적 데이터가 안내하는
+학습 경로로 더 빠르게`,
+    img: "/assets/images/reason/reason1.svg",
+    alt: "이유1",
+  },
+  {
+    id: 2,
+    text: `학교 현장에서 인정받는
+학습 내용으로 더 촘촘하게`,
+    img: "/assets/images/reason/reason2.svg",
+    alt: "이유2",
+  },
+];
+
 function Section4() {
   return (
     <Fourth>
@@ -9,18 +26,12 @@ function Section4() {
         수학 <Span2>실력이 오르는</Span2> 이유
       </Span1>
       <Reasons>
-        <Reason>
-          <DescDiv>
-            <DescSpan>30억 누적 데이터가 안내하는<br />학습 경로로 더 빠르게</DescSpan>
-          </DescDiv>
-          <img src="/assets/images/reason/reason1.svg" alt="이유1" />
-        </Reason>
-        <Reason>
-          <DescDiv>
-            <DescSpan>학교 현장에서 인정받는<br />학습 내용으로 더 촘촘하게</DescSpan>
-          </DescDiv>
-          <img src="/assets/images/reason/reason2.svg" alt="이유2" />
-        </Reason>
+        {reasonsData.map((reason) => (
+          <Reason key={reason.id}>
+            <DescSpan>{reason.text}</DescSpan>
+            <img src={reason.img} alt={reason.alt} />
+          </Reason>
+        ))}
       </Reasons>
     </Fourth>
   );
